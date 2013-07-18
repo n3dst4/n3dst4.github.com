@@ -1,0 +1,21 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}./{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  
+  
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; 
+        <a href="{{ relative }}{{ post.url }}">{{ post.title }}</a>
+        (Post url: {{ post.url }})
+            
+      </li>
+    {% endfor %}
+  </ul>
+</div>
