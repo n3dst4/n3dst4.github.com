@@ -2,9 +2,20 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
+<h2></h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
-{{ content }}
+
+</div>
+
+<div class="blog-post">
+  <h3>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h3>
+  {{ content }}
+  <div class="callout">
+    <ul class="menu simple">
+      <li><a href="#">Author: Neil de Carteret</a></li>
+      <!-- <li><a href="#">Comments: 3</a></li> -->
+    </ul>
+  </div>
 </div>

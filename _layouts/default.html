@@ -13,37 +13,41 @@
         <link rel="stylesheet" href="{{ relative }}css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ relative }}css/main.css">{{ site.url }}/
+        <!-- <link rel="stylesheet" href="{{ relative }}css/main.css">{{ site.url }}/ -->
+        <link rel="stylesheet" href="{{ relative }}vendor/foundation-6/css/foundation.css">
     </head>
     <body>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Neil de Carteret<br />
-                  Front-end/JS/Node guy<br />
-                  <a href=mailto:n3dst4@gmail.com>n3dst4@gmail.com</a>
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/n3dst4/">twitter.com/n3dst4</a><br />
-                </p>
-              </div>
-            </div>
+        <div class="top-bar">
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li class="menu-text">Blog</li>
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
           </div>
-        </div> <!-- /container -->
-        <script src=http://code.jquery.com/jquery-1.10.2.min.js></script>
-        <script src={{relative}}/js/main.js
+        </div>
+
+        <div class="callout large primary">
+          <div class="row column text-center">
+            <h1>Neil de Carteret</h1>
+            <h2 class="subheader">Such a Simple Blog</h2>
+          </div>
+        </div>
+
+        <div class="row medium-8 large-7 columns">
+
+          {{ content }}
+
+        </div>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+
+
+
     </body>
 </html>
